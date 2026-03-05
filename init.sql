@@ -1,0 +1,1 @@
+CREATE DATABASE lexidesk_test_back CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

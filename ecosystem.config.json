@@ -1,0 +1,15 @@
+{
+    "apps": [
+        {
+            "name": "lexidesk_test_back",
+            "script": "yarn",
+            "args": "start:prod",
+            "interpreter": "none",
+            "watch": false,
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 3001
+            }
+        }
+    ]
+}
