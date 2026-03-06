@@ -25,7 +25,6 @@ If a customer becomes abusive, politely end the conversation and offer to escala
     async getByUserId(userId: string): Promise<Prompt> {
         const existing = await this.promptsRepository.findOneBy({ userId });
         if (existing) return existing;
-        // Create default prompt for new users
         const prompt = this.promptsRepository.create({
             userId,
             content: this.defaultPrompt,
