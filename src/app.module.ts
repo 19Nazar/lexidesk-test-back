@@ -26,7 +26,7 @@ import { Conversation } from './conversations/conversation.entity';
                 database: config.get('DB_NAME', 'lexidesk_test_back'),
                 entities: [User, Prompt, Lead, Conversation],
                 logging: true,
-                synchronize: true, // dev only — disable in production
+                synchronize: true,
             }),
         }),
         UsersModule,

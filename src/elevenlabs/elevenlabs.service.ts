@@ -22,13 +22,10 @@ export class ElevenLabsService {
 
     async getSignedUrl(userId: string): Promise<{ signedUrl: string; agentId: string }> {
         try {
-            // Get user's custom prompt
             const promptRecord = await this.promptsService.getByUserId(userId);
 
             console.log({ agentId: this.agentId, apiKey: this.apiKey });
 
-            // Override agent's system prompt dynamically via ElevenLabs API
-            // First get a signed URL for the WebSocket connection
             const response = await axios.get<SignedUrlResponse>(
                 `https://api.elevenlabs.io/v1/convai/conversation/get_signed_url?agent_id=${this.agentId}`,
                 {
