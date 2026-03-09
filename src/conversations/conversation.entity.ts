@@ -26,7 +26,7 @@ export class Conversation {
     @JoinColumn({ name: 'userId' })
     user!: User;
 
-    @Column('json', { default: '[]' })
+    @Column('json')
     messages!: ChatMessage[];
 
     @Column('text', { nullable: true })
